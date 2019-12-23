@@ -1,0 +1,618 @@
+$cont1920: 1235px
+
+@mixin placeholder 
+  &::-webkit-input-placeholder
+  	@content
+  &:-moz-placeholder
+  	@content
+  &::-moz-placeholder
+  	@content
+  &:-ms-input-placeholder
+  	@content
+
+
+%flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-family: Roboto, sans-serif
+	outline: none
+	text-decoration: none
+
+body
+	overflow-y: scroll
+	overflow-x: hidden
+	&.menu-opened
+		overflow-y: hidden		
+
+h2
+	font-size: 40px
+	line-height: 1.17
+	font-weight: 700
+	text-rendering: geometricPrecision
+
+.project-map
+	width: 100%
+	height: 515px
+	border: none
+
+p.hashtag
+	color: #8bc540
+	cursor: default
+	font-size: .75em
+	font-weight: 700
+	line-height: 1.7
+	letter-spacing: 1.5px
+	margin-bottom: 16px
+	margin-right: 16px
+	text-decoration: none
+	text-transform: uppercase
+
+.btn
+	background-color: #8bc540
+	box-sizing: border-box
+	color: #fff
+	cursor: pointer
+	display: inline-block
+	font-size: 14px
+	line-height: 1
+	padding: 16px 24px
+	border-radius: 4px
+	text-align: center
+	transition: .3s
+	-webkit-tap-highlight-color: transparent
+
+section.content
+	background: #f9f9f9
+	padding-top: 80px
+
+.wrapper
+	width: 1440px
+	height: 100%
+	padding: 0 150px
+	margin: 0 auto
+
+.wrapper-contacts
+	padding: 120px 0 80px
+	h2
+		color: #1c1b28
+		font-size: 24px
+		font-weight: 700
+		line-height: 36px
+		letter-spacing: .38px
+		padding-bottom: 35px
+	a
+		color: #1c1b28
+	.project-map
+		margin-top: 60px
+
+.menu
+	display: none
+	z-index: 101
+	top: 0
+	left: 0
+	position: fixed
+	width: 100vw
+	height: 100vh
+	background: #fff
+	&__wrapper
+		@extend %flex
+		flex-direction: column
+		justify-content: space-around
+		text-align: center
+		height: 100%
+		a
+			font-size: 30px
+			color: #000
+			&:hover
+				color: #8bc540
+.menu.menu-opened
+	display: block
+
+.menu-btn
+	display: none
+	position: absolute
+	top: 20px
+	right: 20px
+	height: 40px
+	width: 40px
+	background: #fff
+	span
+		position: absolute
+		top: 50%
+		display: block
+		width: 40px
+		height: 3px
+		background: #000
+		&:before
+			position: absolute
+			top: calc(50% - 16px)
+			content: ''
+			display: block
+			width: 40px
+			height: 3px
+			background: #000
+		&:after
+			position: absolute
+			top: 
+			top: calc(50% + 12px)
+			content: ''
+			display: block
+			width: 40px
+			height: 3px
+			background: #000
+
+
+.close-menu
+	right: 37px
+
+.header
+	z-index: 100
+	position: fixed
+	width: 100%
+	height: 80px
+	background: #fff
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .1)
+	&__body
+		@extend %flex
+		justify-content: space-between
+		align-items: center
+		width: 1440px
+		height: 100%
+		padding: 0 150px
+		margin: 0 auto
+	&__menu
+		@extend %flex
+		font-size: 16px
+		a
+			@extend %flex
+			align-items: center
+			color: #000
+			height: 80px
+			padding: 0 15px
+			&:hover
+				color: #8bc540
+
+.logotype
+	@extend %flex
+	position: relative
+	&__link
+		display: inline-block
+		height: 100%
+		position: absolute
+		width: 100%
+	svg
+		height: 36px
+		margin-right: 14px
+		width: 36px
+	&__name
+		color: #314c55
+		font-size: .81em
+		letter-spacing: 1.86px
+		line-height: 1.29
+		text-transform: uppercase
+
+.footer
+	padding: 80px 0 64px
+	background: #fff
+	&__content-top
+		height: 145px
+		padding: 0 0 24px
+		border-bottom: 1px solid #dcdcdc
+	&__content-bottom
+		padding: 20px 0 0
+	&__container
+		@extend %flex
+		justify-content: space-between
+		width: 1440px
+		height: 100%
+		padding: 0 150px
+		margin: 0 auto
+	&__big-col
+		width: calc(54% - 10px)
+	&__small-col
+		width: calc(23% - 10px)
+		p
+			color: #a2abb4
+			font-size: 16px
+			line-height: 19px
+	&__menu
+		a
+			color: #a2abb4
+			font-size: 16px
+			line-height: 19px
+			transition: .3s
+			margin: 0 39px 0 0
+			&:hover
+				color: #8bc540
+			&:last-child
+				margin: 0
+	&__phone
+		color: #001934
+		span
+			display: inline-block
+			font-size: 24px
+			font-weight: 700
+			line-height: 1
+			margin-bottom: 8px
+	&__callback
+		color: #001934
+		font-size: 16px
+		line-height: 24px
+		font-weight: 600
+		&:hover
+			color: #a3d167
+	&__mail
+		color: rgb(162, 171, 180)
+		&:hover
+			color: #a3d167
+
+.navgrid
+	padding: 50px 0 100px
+	&__body
+		@extend %flex
+		justify-content: space-between
+		width: 1440px
+		height: 100%
+		padding: 0 150px
+		margin: 0 auto
+	&__item
+		position: relative
+		width: 31.57%
+	&__item-opacity
+		background: opacity
+	&__item-white
+		background: white
+		padding: 35px 40px 0
+		transition: box-shadow .3s
+		h3
+			font-size: 24px
+			line-height: 1.5
+			font-weight: 400
+		.img
+			position: absolute
+			top: 41px
+			right: 40px
+			width: 40px
+			height: 40px
+			transition: transform .2s
+			transition: transform .2s, -webkit-transform .2s
+		.btn
+			margin-top: 42px
+			background: #aaa
+			font-size: 16px
+			padding: 16px 20px
+		&:hover
+			box-shadow: 0 5px 15px 1px rgba(0, 0, 0, .2)
+			.btn
+				background: #8bc540
+			.img
+				-webkit-transform: scale(1.1)
+				transform: scale(1.1)
+
+.banner
+	position: relative
+	width: 100%
+	height: 560px
+	background-size: cover
+	background-position: center
+	&__wrapper
+		@extend %flex
+		align-items: flex-end
+		width: 1538px
+		height: 100%
+		padding: 0 150px
+		margin: 0 auto		
+	&__name
+		display: inline-block
+		padding: 30px 40px
+		background: #fff
+		font-size: 36px
+		line-height: 49.5px
+		font-weight: bold
+		margin-left: 30px
+
+.banner-type2
+	position: relative
+	width: 100%
+	height: 236px
+	background-size: cover
+	background-position: 100% 100%
+	&__wrapper
+		padding-bottom: 80px
+		padding-top: 64px	
+		box-sizing: border-box
+		margin: 0 auto
+		max-width: 1440px
+		width: auto !important
+		padding-left: 150px
+		padding-right: 150px
+	&__name
+		color: #072833
+		font-size: 3em
+		letter-spacing: .11px
+		line-height: 1.13
+		margin-top: 16px
+		max-width: 590px
+
+.banner-type3
+	position: relative
+	width: 100%
+	height: 276px
+	background-size: cover
+	background-position: 100% 100%
+	&__wrapper
+		padding-bottom: 80px
+		padding-top: 64px	
+		box-sizing: border-box
+		margin: 0 auto
+		max-width: 1440px
+		width: auto
+		padding-left: 150px
+		padding-right: 150px
+	&__name
+		color: #072833
+		font-size: 3em
+		letter-spacing: .11px
+		line-height: 1.13
+		margin-top: 16px
+		max-width: 590px
+
+.container
+	background: #fff
+	&__row
+		@extend %flex
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 1208px
+		margin: 0 auto
+		padding-top: 24px
+	.item
+		display: inline-block
+		width: 49%
+		height: 408px
+		background: #fff
+		margin-bottom: 42px
+		border: 1px solid #ebedee
+		.img
+			height: 300px
+			width: 100%
+			background-size: cover
+		.desc
+			position: relative
+			@extend %flex
+			flex-wrap: wrap
+			justify-content: space-between
+			background: transparent
+			width: 100%
+			padding: 25px 40px 15px
+			min-height: 106px
+			transition: all 0.3s ease-in-out
+			&:before
+				z-index: 1
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 100%
+				height: 50px
+				background: #fff
+			&__left
+				z-index: 2
+			&__right
+				z-index: 2
+			&__bottom
+				width: 100%
+				padding-top: 35px
+				a
+					opacity: 0
+					color: #1c1b28
+					font: 600 14px/14px Roboto, Arial, Helvetica, sans-serif
+					text-transform: uppercase
+					transition: all 0.3s ease-in-out
+			&__name
+				color: #1c1b28
+				font: 600 18px/18px Roboto, Arial, Helvetica, sans-serif
+			&__where
+				color: #77798c
+				padding-top: 15px
+				letter-spacing: 0.4px
+				font: 500 16px/16px Roboto, Arial, Helvetica, sans-serif
+			&__price
+				text-align: right
+				color: #77798c
+				font: 500 16px/16px Roboto, Arial, Helvetica, sans-serif
+				letter-spacing: 0.4px
+				span
+					color: #1c1b28
+					font: 600 18px/18px Roboto, Arial, Helvetica, sans-serif
+			&__price-m2
+				color: #77798c
+				font: 500 16px/16px Roboto, Arial, Helvetica, sans-serif
+				padding-top: 15px
+				letter-spacing: 0.4px
+		&:hover
+			.desc
+				transform: translateY(-50px)
+				&__bottom
+					a
+						opacity: 1
+	&__arenda
+		.desc
+			&__where
+				font-size: 13px !important
+				max-width: 308px
+			&__price-m2
+				color: #77798c
+				font: 500 16px/16px Roboto, Arial, Helvetica, sans-serif
+				letter-spacing: 0.4px
+				padding-top: 0 !important
+				span
+					color: #1c1b28
+					font: 600 18px/18px Roboto, Arial, Helvetica, sans-serif
+			&__floor
+				color: #77798c
+				font: 500 16px/16px Roboto, Arial, Helvetica, sans-serif
+				letter-spacing: 0.4px
+				padding-top: 15px
+				span
+					color: #1c1b28
+					font: 600 18px/18px Roboto, Arial, Helvetica, sans-serif
+
+.content-with-right-sidebar
+	@extend %flex
+	justify-content: space-between
+	width: 1440px
+	height: 100%
+	padding: 80px 150px 120px
+	margin: 0 auto
+	.content
+		width: 71%
+		padding-right: 45px
+		h2
+			font-size: 2em
+			font-weight: 700
+			letter-spacing: .5px
+			line-height: 40px
+			margin-bottom: 28px
+		ul
+			padding-left: 10px
+			list-style: none
+		li
+			color: #072833
+			font-size: 1em
+			font-weight: 500
+			letter-spacing: .4px
+			line-height: 24px
+			list-style-type: none
+			margin-bottom: 24px
+			padding-left: 6px
+			position: relative
+	.sidebar
+		width: 29%
+		padding: 28px
+		span
+			display: inline-block
+		&__info
+			margin-bottom: 24px
+		&__name
+			color: #072833
+			margin-bottom: 8px
+		&__content
+			color: #677b82
+		&__hr
+			background: #9ba9ad
+			margin: 24px 0
+			box-sizing: content-box
+			height: 0
+			overflow: visible
+		&__text
+			color: #677b82
+
+.about-project
+	@extend %flex
+	justify-content: space-between
+	width: 1470px
+	padding: 40px 165px
+	margin: 0 auto
+	&__img
+		width: 57%
+		height: 500px
+		padding-right: 50px
+		img
+			width: auto
+			max-width: 100%
+			height: 100%
+	&__about
+		width: 43%
+		padding-top: 90px
+		padding-left: 80px
+		h2
+			font-size: 48px
+			font-weight: bold
+			margin-bottom: 20px
+		p
+			line-height: 1.375
+			margin-bottom: 56px
+
+.news
+	width: 520px
+	padding: 50px 10px 0 0
+	&__item
+		@extend %flex
+		justify-content: space-between
+		padding-bottom: 60px
+		&-date
+			font-size: 54px
+			line-height: 54px
+			display: block
+			margin: 0 0 9px
+			font-weight: bold
+			color: #072833
+			font-weight: 500
+			span
+				display: block
+				font-size: 18px
+				line-height: 18px
+				color: #051F28
+				font-weight: 400
+				padding-top: 9px
+		&-text
+			display: block
+			font-size: 18px
+			line-height: 18px
+			color: #051F28
+			padding-left: 40px
+			padding-top: 4px
+			line-height: 24px
+
+.banner-with-desc
+	.img
+		position: relative
+		width: 100%
+		height: 560px
+		background-size: cover
+		background-position: center
+		&__wrapper
+			@extend %flex
+			align-items: flex-end
+			width: 1470px
+			height: 100%
+			padding: 0 150px
+			margin: 0 auto		
+		&__name
+			display: inline-block
+			left: calc(50% - 586px)
+			padding: 30px 40px
+			background: #fff
+			font-size: 36px
+			line-height: 49.5px
+			font-weight: bold
+	.desc
+		width: 1470px
+		height: 100%
+		padding: 0 150px
+		margin: 0 auto
+		&__wrapper
+			@extend %flex
+			justify-content: space-between
+			align-items: center
+			padding: 30px 40px
+			font-size: 24px
+			background: #fff
+		&__col
+			span
+				display: block
+				color: #001934
+				opacity: 0.4
+				font-size: 14px
+
+
+@import "media"
